@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from markupsafe import escape
 import pandas as pd
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, ServiceContext
@@ -12,6 +13,7 @@ import os
 import random
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def hello():
@@ -63,3 +65,6 @@ def advance():
   response = llm.complete(defaultPrompt)
 
   return json.loads(str(response))
+
+if __name__ == "__main__":
+  app.run(port=5000, debug=True)

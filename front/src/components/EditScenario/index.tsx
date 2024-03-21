@@ -39,6 +39,11 @@ function EditScenario() {
         prompt: anecdote,
         characters: agentNames.split(','),
       })
+      scenario.name = (scenario as unknown as { title: string })['title'] // TODO Do better typing
+      scenario.scenes = scenario.scenes.map((scene) => {
+        scene.title = (scene as unknown as { name: string })['name'] // TODO Do better typing
+        return scene
+      })
       setScenario(scenario)
 
       const promises = scenario.scenes.map(async (scene) => {

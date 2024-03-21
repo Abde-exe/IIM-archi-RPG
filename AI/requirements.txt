@@ -1,10 +1,4 @@
 flask
-markupsafe
-pandas
+flask_cors
 llama-index
-llama-index-embeddings-huggingface
 llama-index-llms-ollama
-qdrant_client
-pypdf
-transformers
-torch
