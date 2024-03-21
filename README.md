@@ -20,6 +20,7 @@ copy the `.env.example` file to `.env` and fill in the required fields in both `
 
 - `npm run dev` - Start the development server
 - `npm run dev:front` - Start the development server in the `front` workspace
+- `npm run dev:back` - Start the development server in the `back` workspace
 - `npm run build` - Build the project
 - `npm run build:front` - Build the project in the `front` workspace
 - `npm run format` - Format the code with Prettier
@@ -74,17 +75,48 @@ AI script is located in the AI folder in the app.py file.
 
 # Endpoints usage
 
-### GET /characters
+## Characters
+
+### GET api/characters
 Get all characters
 
-### GET /characters/:id
+### GET api/characters/:id
 Get a character by id
 
-### POST /characters
+### POST api/characters
 Create a character
 
-### PUT /characters/:id
+### PUT api/characters/:id
 Update a character by id
 
-### DELETE /characters/:id
+### DELETE api/characters/:id
 Delete a character by id
+
+## Scenarios
+
+### GET api/scenarios
+Get all scenarios
+
+### GET api/scenarios/:id
+Get a scenario by id
+
+### POST api/scenarios
+Create a scenario
+
+### PUT api/scenarios/:id
+Update a scenario by id
+
+### DELETE api/scenarios/:id
+Delete a scenario by id
+
+
+## Users
+
+### POST api/auth/local
+Login a user with email and password
+```json
+{
+  "identifier": "email@example.com",
+  "password": "password"
+}
+```
