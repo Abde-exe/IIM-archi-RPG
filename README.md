@@ -82,41 +82,50 @@ AI script is located in the AI folder in the app.py file.
 
 ## 🕵️‍♀️Characters
 
-### GET api/characters
+### GET /api/characters
 Get all characters
 
-### GET api/characters/:id
+### GET /api/characters/:id
 Get a character by id
 
-### POST api/characters
+### POST /api/characters
 Create a character
 
-### PUT api/characters/:id
+### PUT /api/characters/:id
 Update a character by id
 
-### DELETE api/characters/:id
+### DELETE /api/characters/:id
 Delete a character by id
 
 ## 📖Scenarios
 
-### GET api/scenarios
+### GET /api/scenarios
 Get all scenarios
 
-### GET api/scenarios/:id
+### GET /api/scenarios/:id
 Get a scenario by id
 
-### POST api/scenarios
+### POST /api/scenarios
 Create a scenario
 
-### PUT api/scenarios/:id
+### PUT /api/scenarios/:id
 Update a scenario by id
 
-### DELETE api/scenarios/:id
+### DELETE /api/scenarios/:id
 Delete a scenario by id
 
 ## 🤖AI
 
-### POST generate/
+### POST /generate
+Generate a scenario based on the input
+```json
+{
+  "characters": ["Name 1", "Name 2"],
+  "prompt": "Prompt text ..."
+}
+```
+
+### POST /advance
 Generate a scenario based on the input
 ```json
 {
@@ -127,7 +136,7 @@ Generate a scenario based on the input
 
 ## 👨‍💻Users
 
-### POST api/auth/local
+### POST /api/auth/local
 Login a user with email and password
 ```json
 {
