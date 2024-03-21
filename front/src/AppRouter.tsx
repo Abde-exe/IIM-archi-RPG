@@ -6,7 +6,7 @@ import {
   Route,
   useLocation,
 } from 'react-router-dom'
-import Home from './pages/Home'
+import Home from './pages/Home/Home.tsx'
 import Menu from './components/menu/Menu'
 import PlayerSelection from './pages/PlayerSelection/PlayerSelection.tsx'
 import EditScenarioPage from './pages/EditScenarioPage'

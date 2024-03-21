@@ -11,6 +11,10 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    .--skills {
+      margin-top: 30px;
+    }
+
     &__icon {
       width: 52px;
       height: 52px;
@@ -71,8 +75,4 @@
       color: white;
     }
   }
-}
-
-.--skills {
-  margin-top: 30px;
 }

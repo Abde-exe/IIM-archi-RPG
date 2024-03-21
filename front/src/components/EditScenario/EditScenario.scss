@@ -5,6 +5,14 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  h2 {
+    font-family: 'Bebas Neue';
+    font-size: 36px;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .edit-scenario-main {
@@ -29,12 +37,4 @@
   height: 80%;
   background-image: url('../../assets/CardScenario.png');
   background-size: cover;
-}
-
-h2 {
-  font-family: 'Bebas Neue';
-  font-size: 36px;
-  color: #ffffff;
-  margin: 0;
-  padding: 0;
 }

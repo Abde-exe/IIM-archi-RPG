@@ -1,3 +1,8 @@
+# Prerequisites
+
+- Node.js 20.11.1
+- Python 3.10
+
 # Installation
 
 Clone this project with your favorite way (SSH, HTTPS, GitHub CLI, etc.)
@@ -5,6 +10,11 @@ Clone this project with your favorite way (SSH, HTTPS, GitHub CLI, etc.)
   npm install
 ```
 copy the `.env.example` file to `.env` and fill in the required fields in both `back` and `front` workspaces.
+
+```bash
+  cd AI/
+  pip install -r requirements.txt
+```
 
 # Commands
 
@@ -37,17 +47,29 @@ copy the `.env.example` file to `.env` and fill in the required fields in both `
 ## Frontend
 - `public/` - Static files
 - `src/` - Entry point of the application
-  - `src/components/` - Reusable components
   - `src/assets/` - Images, fonts, etc.
+  - `src/components/` - Reusable components
+  - `src/pages/` - Pages
+  - `src/services/` - API services
+  - `src/types/` - Types
 
 
 ## Backend
 
-_WIP_
+- `config/` - Configuration files
+- `database`
+  - `migrations/`- Database migrations
+- `public/` - Static files
+- `src/` - Entry point of the backend
+  - `src/admin/` - Admin panel
+  - `src/api/` - API routes
+  - `src/extensions/` - Extensions
+- `types/`
+  - `generated/` - Generated types
 
 ## AI
 
-_WIP_
+AI script is located in the AI folder in the app.py file.
 
 
 # Endpoints usage
@@ -66,5 +88,3 @@ Update a character by id
 
 ### DELETE /characters/:id
 Delete a character by id
-
-_WIP_

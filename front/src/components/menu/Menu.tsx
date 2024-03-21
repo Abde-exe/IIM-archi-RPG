@@ -1,7 +1,7 @@
 // Menu.tsx
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-
+import './Menu.scss'
 /**
  * Menu component is responsible for rendering a navigation menu.
  * The menu includes links to the "Home", "player Creation", and "Scenario Creation" pages.

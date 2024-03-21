@@ -86,7 +86,12 @@ const ModelViewer: FC = () => {
   return (
     <div
       ref={mountRef}
-      style={{ display: 'flex', justifyItems: 'center', alignItems: 'center' }}
+      style={{
+        display: 'flex',
+        justifyItems: 'center',
+        alignItems: 'center',
+        pointerEvents: 'none',
+      }}
     />
   )
 }
