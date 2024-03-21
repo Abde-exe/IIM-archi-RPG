@@ -114,6 +114,16 @@ Update a scenario by id
 ### DELETE api/scenarios/:id
 Delete a scenario by id
 
+## 🤖AI
+
+### POST generate/
+Generate a scenario based on the input
+```json
+{
+  "characters": ["Name 1", "Name 2"],
+  "prompt": "Prompt text ..."
+}
+```
 
 ## 👨‍💻Users
 
