@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import RightArrow from '../../assets/RightArrow.png' // Make sure the path is correct
 import './Home.scss'
+
 /**
  * Home component is the landing page of the application.
  * It provides navigation to the player creation, scenario creation, and game start pages.

@@ -10,7 +10,4 @@ export const api = axios.create({
    * @type {string}
    */
   baseURL: `${import.meta.env.VITE_STRAPI_API_URL}/api/`,
-  headers: {
-    Authorization: `Bearer ${import.meta.env.VITE_STRAPI_API_TOKEN}`,
-  },
 })
