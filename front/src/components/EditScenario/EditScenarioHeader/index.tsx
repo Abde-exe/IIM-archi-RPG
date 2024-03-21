@@ -12,7 +12,7 @@ import './EditScenarioHeader.scss'
  * @property {Function} onSubmit - The function to be called when the form is submitted.
  */
 interface EditScenarioProps {
-  onSubmit: (payload: { anecdote: string; agentNumber: number }) => void
+  onSubmit: (payload: { anecdote: string; agentNames: string }) => void
 }
 
 /**
@@ -67,7 +67,7 @@ const anecdotes: Anecdote[] = [
  */
 const EditScenarioHeader: FC<EditScenarioProps> = ({ onSubmit }) => {
   const [anecdoteIndex, setAnecdoteIndexIndex] = useState<number>(0)
-  const [agentNumber, setAgentNumber] = useState(1)
+  const [agentNames, setAgentNames] = useState('')
   // we will generate a scenario based on the user's input
 
   return (
@@ -90,20 +90,20 @@ const EditScenarioHeader: FC<EditScenarioProps> = ({ onSubmit }) => {
       </div>
       <div className="editScenarioHeader-agentNumber">
         <label className="editScenarioHeader-agentNumber__label --label">
-          Agent Number
+          Agent names
         </label>
         <input
           className="editScenarioHeader-agentNumber__selector"
-          type="number"
-          min={0}
-          max={10}
-          value={agentNumber}
-          onChange={(e) => setAgentNumber(Number(e.target.value))}
+          value={agentNames}
+          onChange={(e) => setAgentNames(e.target.value)}
         />
       </div>
       <button
         onClick={() =>
-          onSubmit({ anecdote: anecdotes[anecdoteIndex].content, agentNumber })
+          onSubmit({
+            anecdote: anecdotes[anecdoteIndex].content,
+            agentNames: agentNames,
+          })
         }
       >
         Generate

@@ -1,16 +1,16 @@
 import { FC, useEffect, useState } from 'react'
-import Player from '../../types/Player.ts'
+import { GetPlayerItem } from '../../types/CreatePlayerDto.ts'
 import { api } from '../../services/api.ts'
 import SideBar from '../../components/SideBar/SideBar.tsx'
 import './PlayerList.scss'
 import { PlayerListItem } from './PlayerListItem/PlayerListItem.tsx'
 import SidebarImg from '../../assets/CardsHP3.jpeg'
 export const PlayerList: FC = () => {
-  const [players, setPlayers] = useState<Player[]>([])
+  const [players, setPlayers] = useState<GetPlayerItem[]>([])
   useEffect(() => {
     const fetchPlayers = async () => {
-      const response = await api.get<Player[]>('/characters')
-      setPlayers(response.data)
+      const response = await api.get<{ data: GetPlayerItem[] }>('/players')
+      setPlayers(response.data.data)
     }
     fetchPlayers()
   }, [])

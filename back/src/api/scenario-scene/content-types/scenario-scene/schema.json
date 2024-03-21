@@ -21,15 +21,8 @@
     "description": {
       "type": "text"
     },
-    "props": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::prop.prop"
-    },
     "characters": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::character.character"
+      "type": "json"
     }
   }
 }

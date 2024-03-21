@@ -9,5 +9,8 @@ export const api = axios.create({
    * The base URL for all the API requests.
    * @type {string}
    */
-  baseURL: 'http://localhost:3000',
+  baseURL: `${import.meta.env.VITE_STRAPI_API_URL}/api/`,
+  headers: {
+    Authorization: `Bearer ${import.meta.env.VITE_STRAPI_API_TOKEN}`,
+  },
 })

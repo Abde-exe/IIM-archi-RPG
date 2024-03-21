@@ -1,9 +1,14 @@
-# Prerequisites
+# ✏Project Description
+This project is a web application that will allow TTRPG game masters to create scenarios and characters for a spy game.\
+It uses Mistral AI model to generate scenarios based on the game master's input.\
+This project is a common project between all IIM year 5 students that intend to merge all of their work together
+
+# 🚀Prerequisites
 
 - Node.js 20.11.1
 - Python 3.10
 
-# Installation
+# 🔌Installation
 
 Clone this project with your favorite way (SSH, HTTPS, GitHub CLI, etc.)
 ```bash
@@ -16,7 +21,7 @@ copy the `.env.example` file to `.env` and fill in the required fields in both `
   pip install -r requirements.txt
 ```
 
-# Commands
+# 💻Commands
 
 - `npm run dev` - Start the development server
 - `npm run dev:front` - Start the development server in the `front` workspace
@@ -29,23 +34,23 @@ copy the `.env.example` file to `.env` and fill in the required fields in both `
 - `npm run format-check:front` - Check if the code in the `front` workspace is formatted correctly
 
 
-# Tech Stack
+# 📚Tech Stack
 
-## Frontend
-- React
-- TypeScript
+## 🎨Frontend
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-## Backend
-- Node.js
-- Strapi
+## ⚙Backend
+- [Node.js](https://nodejs.org/en/)
+- [Strapi](https://strapi.io/)
 
-# AI
-- Ollama + Mistral
-- Flask
+# 🤖AI
+- [Ollama + Mistral](https://docs.llamaindex.ai/en/stable/)
+- [Flask](https://flask.palletsprojects.com/en/2.1.x/)
 
-# Structure
+# 🚧Structure
 
-## Frontend
+## 🎨Frontend
 - `public/` - Static files
 - `src/` - Entry point of the application
   - `src/assets/` - Images, fonts, etc.
@@ -55,7 +60,7 @@ copy the `.env.example` file to `.env` and fill in the required fields in both `
   - `src/types/` - Types
 
 
-## Backend
+## ⚙Backend
 
 - `config/` - Configuration files
 - `database`
@@ -68,14 +73,14 @@ copy the `.env.example` file to `.env` and fill in the required fields in both `
 - `types/`
   - `generated/` - Generated types
 
-## AI
+## 🤖AI
 
 AI script is located in the AI folder in the app.py file.
 
 
-# Endpoints usage
+# 🌐Endpoints usage
 
-## Characters
+## 🕵️‍♀️Characters
 
 ### GET api/characters
 Get all characters
@@ -92,7 +97,7 @@ Update a character by id
 ### DELETE api/characters/:id
 Delete a character by id
 
-## Scenarios
+## 📖Scenarios
 
 ### GET api/scenarios
 Get all scenarios
@@ -110,7 +115,7 @@ Update a scenario by id
 Delete a scenario by id
 
 
-## Users
+## 👨‍💻Users
 
 ### POST api/auth/local
 Login a user with email and password
@@ -120,3 +125,7 @@ Login a user with email and password
   "password": "password"
 }
 ```
+
+# 🏗️ Application's architecture schema
+![archi](https://github.com/SveRKeR92/IIM-archi-RPG/assets/70761787/13cd3d9c-f03f-4302-adce-0846a2a0ed0d)
+

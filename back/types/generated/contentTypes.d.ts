@@ -893,21 +893,9 @@ export interface ApiPlayerPlayer extends Schema.CollectionType {
     name: Attribute.String;
     profession: Attribute.String;
     clearance: Attribute.String;
-    mentals: Attribute.Relation<
-      'api::player.player',
-      'oneToMany',
-      'api::mental.mental'
-    >;
-    socials: Attribute.Relation<
-      'api::player.player',
-      'oneToMany',
-      'api::social.social'
-    >;
-    physicals: Attribute.Relation<
-      'api::player.player',
-      'oneToMany',
-      'api::physical.physical'
-    >;
+    mentals: Attribute.JSON;
+    physicals: Attribute.JSON;
+    socials: Attribute.JSON;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1000,16 +988,7 @@ export interface ApiScenarioSceneScenarioScene extends Schema.CollectionType {
     title: Attribute.String;
     location: Attribute.String;
     description: Attribute.Text;
-    props: Attribute.Relation<
-      'api::scenario-scene.scenario-scene',
-      'oneToMany',
-      'api::prop.prop'
-    >;
-    characters: Attribute.Relation<
-      'api::scenario-scene.scenario-scene',
-      'oneToMany',
-      'api::character.character'
-    >;
+    characters: Attribute.JSON;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -22,19 +22,13 @@
       "type": "string"
     },
     "mentals": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::mental.mental"
-    },
-    "socials": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::social.social"
+      "type": "json"
     },
     "physicals": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::physical.physical"
+      "type": "json"
+    },
+    "socials": {
+      "type": "json"
     }
   }
 }
